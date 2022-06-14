@@ -15,7 +15,7 @@ class App extends React.Component {
 
   getYoutubeAPI = () => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.AIzaSyAjzN0788Qelc0wXZVUCSBrUSNWxzOukeU}`
+      `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then((json) => {
