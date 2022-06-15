@@ -37,12 +37,13 @@ class App extends React.Component {
       <div>
         <Router>
           <Nav />
+
           <Routes>
             <Route path="/" element={<Home videos={this.state.videos} />} />
             <Route path="/about" element={<AboutMeSection />} />
           </Routes>
         </Router>
-        <SearchBar />
+
         {console.log(this.state.videos)}
         {/* <VideoList videos={this.state.videos} /> */}
       </div>
