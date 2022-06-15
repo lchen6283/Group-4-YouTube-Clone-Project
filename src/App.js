@@ -17,7 +17,7 @@ class App extends React.Component {
 
   getYoutubeAPI = () => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q=test&key=AIzaSyAjzN0788Qelc0wXZVUCSBrUSNWxzOukeU`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q=test&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then((json) => {
@@ -37,12 +37,13 @@ class App extends React.Component {
       <div>
         <Router>
           <Nav />
+
           <Routes>
             <Route path="/" element={<Home videos={this.state.videos} />} />
             <Route path="/about" element={<AboutMeSection />} />
           </Routes>
         </Router>
-        <SearchBar />
+
         {console.log(this.state.videos)}
         {/* <VideoList videos={this.state.videos} /> */}
       </div>
