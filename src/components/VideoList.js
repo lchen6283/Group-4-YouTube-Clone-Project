@@ -1,11 +1,11 @@
 import Video from "./Video.js";
+import "./VideoList.css";
 
 const VideoList = ({ videos }) => {
-  const { items } = videos;
   return (
-    <div>
-      {items.map((video) => {
-        return <Video video={video} />;
+    <div className="container">
+      {videos.map((video) => {
+        return <Video video={video} key={video.etag} />;
       })}
     </div>
   );

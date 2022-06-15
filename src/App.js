@@ -5,7 +5,7 @@ import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import AboutMeSection from "./components/About";
-import Home from "./Home";
+import Home from "./components/Home";
 
 class App extends React.Component {
   constructor() {
@@ -17,11 +17,11 @@ class App extends React.Component {
 
   getYoutubeAPI = () => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q=test&key=AIzaSyAjzN0788Qelc0wXZVUCSBrUSNWxzOukeU`
     )
       .then((response) => response.json())
       .then((json) => {
-        this.setState({ videos: json });
+        this.setState({ videos: json.items });
       })
       .catch((err) => {
         console.log("error fetching image");
@@ -38,7 +38,7 @@ class App extends React.Component {
         <Router>
           <Nav />
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Home videos={this.state.videos} />} />
             <Route path="/about" element={<AboutMeSection />} />
           </Routes>
         </Router>
