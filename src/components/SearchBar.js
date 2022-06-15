@@ -16,7 +16,7 @@ class SearchBar extends React.Component {
             name="search"
             placeholder="Search..."
             autoComplete="off"
-          ></input>
+          />
           <button>Search</button>
         </form>
       </div>
