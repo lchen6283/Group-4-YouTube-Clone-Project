@@ -4,6 +4,8 @@ import Nav from "./components/Nav";
 import SearchBar from "./components/SearchBar";
 import VideoList from "./components/VideoList";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import AboutMeSection from "./components/About";
+import Home from "./Home";
 
 class App extends React.Component {
   constructor() {
@@ -34,8 +36,10 @@ class App extends React.Component {
     return (
       <div>
         <Router>
+          <Nav />
           <Routes>
-            <Route path="/" element={<Nav />} />
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutMeSection />} />
           </Routes>
         </Router>
         <SearchBar />
