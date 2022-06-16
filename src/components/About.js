@@ -1,4 +1,4 @@
-import "./About.css";
+import About from "./About.css";
 
 const AboutMeSection = () => {
   return (
