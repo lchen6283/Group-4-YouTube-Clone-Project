@@ -1,3 +1,6 @@
+import YouTube from "react-youtube";
+import "./Video.css";
+
 const Video = ({ video }) => {
   const { snippet, id } = video;
   const { thumbnails } = snippet;
