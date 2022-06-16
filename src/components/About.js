@@ -3,7 +3,7 @@ import About from "./About.css";
 const AboutMeSection = () => {
   return (
     <>
-      
+      <div>
         <h4>Engineered By:</h4>
         {/* <h6>Emalee Soto,<br></br> Candace Garvin, <br></br>and Lawrence Chan</h6> */}
         <div id="card">
@@ -23,7 +23,7 @@ const AboutMeSection = () => {
           video by title or content and be met with thousands of video that meet
           their search. We hope we have done it justice. Thanks for stopping by.{" "}
         </p>
-      
+      </div>
     </>
   );
 };

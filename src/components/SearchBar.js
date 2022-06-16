@@ -1,5 +1,7 @@
 import React from "react";
+import VideoList from "./VideoList";
 import "./SearchBar.css";
+import Video from "./Video";
 
 class SearchBar extends React.Component {
   constructor() {
@@ -18,12 +20,15 @@ class SearchBar extends React.Component {
 
   handleFormSubmit = (event) => {
     event.preventDefault();
-    const { searchForVideo } = this.props;
+    const { searchForVideo, videos } = this.props;
     searchForVideo(this.state.search);
-    this.setState({});
+    this.setState({
+      search: "",
+    });
   };
 
   render() {
+    const { videos } = this.props;
     return (
       <div>
         <form onSubmit={this.handleFormSubmit}>
@@ -32,11 +37,13 @@ class SearchBar extends React.Component {
             type="text"
             name="search"
             onChange={this.handleSelectChange}
+            value={this.state.search}
             placeholder="Search..."
             autoComplete="off"
           />
           <button type="submit">Search</button>
         </form>
+        <VideoList videos={videos} />;
       </div>
     );
   }
