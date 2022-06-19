@@ -1,4 +1,5 @@
 import About from "./About.css";
+import CommentSection from "./CommentSection";
 
 const AboutMeSection = () => {
   return (
@@ -24,6 +25,7 @@ const AboutMeSection = () => {
           their search. We hope we have done it justice. Thanks for stopping by.{" "}
         </p>
       </div>
+      <CommentSection/>
     </>
   );
 };
