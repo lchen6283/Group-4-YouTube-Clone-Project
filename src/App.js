@@ -6,7 +6,7 @@ import AboutMeSection from "./components/About";
 import Home from "./components/Home";
 import Video from "./components/Video";
 
-const App = () => {
+const App = (changeTheme) => {
   // getYoutubeAPI = () => {
   //   fetch(
   //     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q=test&key=${process.env.REACT_APP_API_KEY}`
@@ -27,7 +27,7 @@ const App = () => {
   return (
     <div>
       <Router>
-        <Nav />
+        <Nav changeTheme={changeTheme} />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<AboutMeSection />} />

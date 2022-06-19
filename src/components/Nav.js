@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
-const Nav = () => {
+const Nav = (changeTheme) => {
   return (
     <header>
       <Link to="/">
@@ -15,6 +15,7 @@ const Nav = () => {
       <Link to="/about">
         <h1>About</h1>
       </Link>
+      <button onClick={changeTheme}>toggle dark mode</button>
     </header>
   );
 };
