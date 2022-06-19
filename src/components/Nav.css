@@ -2,6 +2,8 @@ header {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   background-color: red;
+  position: sticky;
+  top: 0px;
 }
 
 h1 {
@@ -11,4 +13,16 @@ h1 {
 
 a {
   text-decoration: none;
+}
+
+@media (max-width: 767px) {
+  header {
+    display: grid;
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  h1 {
+    font-size: 20px;
+    margin: 5px;
+  }
 }

@@ -1,6 +1,7 @@
 form {
   margin: 50px;
-  text-align: center;
+  position: sticky;
+  top: 120px;
 }
 
 input {
@@ -18,4 +19,13 @@ button {
   border-radius: 5px;
   height: 45px;
   width: 120px;
+}
+
+@media (max-width: 372px) {
+  input {
+    width: 100%;
+  }
+  button {
+    margin-top: 10px;
+  }
 }
