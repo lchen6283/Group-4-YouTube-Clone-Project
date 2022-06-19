@@ -2,10 +2,15 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import "./Home.css";
 
+/**
+ * Class component Home page, manages videos and API call
+ * @returns <SearchBar>
+ */
 class Home extends React.Component {
   constructor() {
     super();
     this.state = {
+      searchMade: false,
       videos: [],
     };
   }

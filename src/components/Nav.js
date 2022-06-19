@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
 import "./Nav.css";
 
+/**
+ * Nav bar
+ * @returns <header> with links to home and about pages
+ */
 const Nav = () => {
   return (
     <header>

@@ -2,10 +2,14 @@ import React from "react";
 import "./App.css";
 import Nav from "./components/Nav";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import AboutMeSection from "./components/About";
+import About from "./components/About";
 import Home from "./components/Home";
-import Video from "./components/Video";
+import VideoPlayer from "./components/VideoPlayer";
 
+/*
+ *Returns Home,
+ *
+ */
 const App = () => {
   // getYoutubeAPI = () => {
   //   fetch(
@@ -30,8 +34,8 @@ const App = () => {
         <Nav />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<AboutMeSection />} />
-          <Route path="/videos/:id" element={<Video />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/videos/:id" element={<VideoPlayer />} />
         </Routes>
       </Router>
     </div>
