@@ -2,10 +2,15 @@ import React from "react";
 import SearchBar from "./SearchBar";
 import "./Home.css";
 
+/**
+ * Class component Home page, manages videos and API call
+ * @returns <SearchBar>
+ */
 class Home extends React.Component {
   constructor() {
     super();
     this.state = {
+      searchMade: false,
       videos: [],
     };
   }
@@ -35,7 +40,7 @@ class Home extends React.Component {
           videos={this.state.videos}
         />
         {!this.state.videos.length && (
-          <p>No search results yet! Please submit a search</p>
+          <p>No Search Results Yet! Please submit a search above!</p>
         )}
       </div>
     );
