@@ -17,7 +17,7 @@ const VideoList = ({ videos }) => {
           <div key={etag}>
             <Link to={`./videos/${id.videoId}`}>
               <VideoThumbnail video={video} />
-              <p>{title}</p>
+              <p className="title">{title}</p>
             </Link>
           </div>
         );

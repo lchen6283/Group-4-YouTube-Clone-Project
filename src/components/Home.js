@@ -40,7 +40,7 @@ class Home extends React.Component {
           videos={this.state.videos}
         />
         {!this.state.videos.length && (
-          <p>No search results yet! Please submit a search</p>
+          <p>No Search Results Yet! Please submit a search above!</p>
         )}
       </div>
     );
