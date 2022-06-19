@@ -12,23 +12,6 @@ import Modal from "./components/Modal";
  *
  */
 const App = () => {
-  // getYoutubeAPI = () => {
-  //   fetch(
-  //     `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=9&q=test&key=${process.env.REACT_APP_API_KEY}`
-  //   )
-  //     .then((response) => response.json())
-  //     .then((json) => {
-  //       this.setState({ videos: json.items });
-  //     })
-  //     .catch((err) => {
-  //       console.log("error fetching image");
-  //     });
-  // };
-
-  // componentDidMount() {
-  //   this.getYoutubeAPI();
-  // }
-
   return (
     <div>
       <Router>

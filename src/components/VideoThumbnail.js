@@ -28,7 +28,7 @@ class VideoThumbnail extends React.Component {
     const { thumbnails } = snippet;
     return (
       <div>
-        <img src={thumbnails.high.url} alt={id.videoId} />
+        <img className="videos" src={thumbnails.high.url} alt={id.videoId} />
       </div>
     );
   }

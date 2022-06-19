@@ -53,7 +53,9 @@ class SearchBar extends React.Component {
             placeholder="Search..."
             autoComplete="off"
           />
-          <button type="submit">Search</button>
+          <button className="searchButton" type="submit">
+            Search
+          </button>
         </form>
         <VideoList videos={videos} />
       </div>

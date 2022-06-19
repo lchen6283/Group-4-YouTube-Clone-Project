@@ -1,12 +1,26 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    margin-right: 100px;
-    margin-left: 100px;
-    gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
-img {
-    padding-top: 10%;
-    width: 80%;
-    height: 75%;
+
+img.videos {
+  width: 70%;
+  height: 75%;
+  padding-top: 20px;
+}
+
+img.videos:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}
+
+a {
+  color: black;
+}
+
+@media (max-width: 767px) {
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
