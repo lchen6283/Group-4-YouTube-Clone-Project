@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import "./Home.css";
+import Modal from "./Modal";
 
 /**
  * Class component Home page, manages videos and API call

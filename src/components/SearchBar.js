@@ -1,5 +1,6 @@
 import React from "react";
 import VideoList from "./VideoList";
+import Modal from "./Modal";
 import "./SearchBar.css";
 
 /**
@@ -11,6 +12,7 @@ class SearchBar extends React.Component {
     super();
     this.state = {
       search: "",
+      showModal: false,
     };
   }
 
@@ -28,6 +30,13 @@ class SearchBar extends React.Component {
     this.setState({
       search: "",
     });
+  };
+
+  showModal = (event) => {
+    this.setState({
+      showModal: !this.state.show,
+    });
+    console.log("Open Modal");
   };
 
   render() {
