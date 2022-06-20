@@ -30,10 +30,6 @@ class Home extends React.Component {
       });
   };
 
-  // componentDidMount() {
-  //   this.searchForVideo();
-  // }
-
   render() {
     return (
       <div className="thumbnails">

@@ -1,6 +1,11 @@
 import React, { forwardRef } from "react";
 import "./Modal.css";
 
+/**
+ * Modal Window that displays an error message
+ * @params navigate - useNavigate()
+ * @returns Error Message in Modal Window View
+ */
 const Modal = ({ navigate }) => {
   const [display, setDisplay] = React.useState(true);
 
@@ -16,7 +21,6 @@ const Modal = ({ navigate }) => {
         <div className="modal-box">
           <h1>400 error</h1>
           <p>Sent bad request</p>
-          <p></p>
           <button onClick={close}>Close</button>
         </div>
       </div>

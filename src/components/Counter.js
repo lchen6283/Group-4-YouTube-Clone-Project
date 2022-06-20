@@ -1,6 +1,9 @@
 import React from "react";
 
-//Changed methods to setState
+/**
+ * Class component Counter, manages likes and dislikes of a comment
+ * @returns Button that adds likes and dislikes to a comment
+ */
 class Counter extends React.Component {
   constructor() {
     super();

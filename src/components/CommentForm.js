@@ -1,9 +1,10 @@
 import React from "react";
-import CommentSection from "./CommentSection";
 import "./CommentSection.css";
 
-//Changed class and id names for labels and added for=""
-//onChange needs to be added
+/**
+ * Class component Comment form, manages comments and users
+ * @returns Form
+ */
 class CommentForm extends React.Component {
   constructor() {
     super();
@@ -32,8 +33,12 @@ class CommentForm extends React.Component {
     this.props.addCommentToList(
       `${this.state.userName} says: ${this.state.comment}`
     );
+    this.setState({
+      userName: "",
+      comment: "",
+    });
   };
-  //Changed value to this.state.userName
+
   render() {
     return (
       <div id="comment-form">
@@ -47,7 +52,7 @@ class CommentForm extends React.Component {
               type="text"
               placeholder="Name..."
               onChange={this.updateUserName}
-              // value={this.state.userName}
+              autoComplete="off"
             ></input>
           </label>
           <br></br>
@@ -61,12 +66,10 @@ class CommentForm extends React.Component {
               type="text"
               placeholder="..."
               onChange={this.updateComment}
-              // value={this.state.comment}
+              autoComplete="off"
             ></input>
           </label>
           <button type="submit">Post</button>
-          {/* <input id="submit-comment-button"type="submit" value="Post">
-          </input> */}
         </form>
       </div>
     );
