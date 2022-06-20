@@ -1,17 +1,18 @@
 import React from "react";
 import CommentSection from "./CommentSection";
-import Css from "./CommentSection.css";
+import "./CommentSection.css";
 
-
+//Changed class and id names for labels and added for=""
+//onChange needs to be added
 class CommentForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      commentValue : "",
+      commentValue: "",
       commentList: [],
       userName: "",
-      comment: ""
-    }
+      comment: "",
+    };
   }
  handleChange = (event) => {
  
@@ -25,20 +26,21 @@ class CommentForm extends React.Component {
       })}}
     
 
+  //Changed value to this.state.userName
   render() {
- 
     return (
       <>
       <div id="comment-form">
-        <label>
+        <label for="input-box">
           Name
           <br></br>
           <input
-            id="input-box"
+            className="input-box"
+            id="name"
             type="text"
             placeholder="Name..."
-         
-            value={this.userName}
+            // value={this.state.userName}
+            value={this.state.userName}
           ></input>
         </label>
         <br></br>
@@ -47,16 +49,14 @@ class CommentForm extends React.Component {
           Comment
           <br></br>
           <input
-            id="input-box"
+            className="input-box"
+            id="comment"
             type="text"
             placeholder="..."
             onChange={this.state.handleChange}
           ></input>
         </label>
-        <button onClick={this.handleFormSubmit}
-        >
-          Post
-          </button>
+        <button onClick={this.handleFormSubmit}>Post</button>
         {/* <input id="submit-comment-button"type="submit" value="Post">
           </input> */}
       </div>
@@ -75,6 +75,5 @@ class CommentForm extends React.Component {
     );
   }
 }
-
 
 export default CommentForm;

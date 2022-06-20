@@ -7,17 +7,25 @@ import "./VideoList.css";
  * @param {Array} videos
  * @returns <div> containing video thumbnail and link
  */
-const VideoList = ({ videos }) => {
+const VideoList = ({ videos, passedFrom }) => {
   return (
     <div className="container">
       {videos.map((video) => {
         const { id, snippet, etag } = video;
         const { title } = snippet;
+        if (passedFrom === "trending") {
+          return (
+            <Link to={`./videos/${id}`}>
+              <VideoThumbnail video={video} />
+              <p className="title">{title}</p>
+            </Link>
+          );
+        }
         return (
           <div key={etag}>
             <Link to={`./videos/${id.videoId}`}>
               <VideoThumbnail video={video} />
-              <p className="title">{title}</p>
+              <p2>{title}</p2>
             </Link>
           </div>
         );
