@@ -12,7 +12,7 @@ const About = () => {
   return (
     <div className="about">
       <h3>About Project:</h3>
-      <p>
+      <p className="about-prj">
         We are currently Jr. Software Engineers at Pursuit located in Queens,
         NY. The purpose of this app is create our rendition of the world famous
         YouTube application. Together we have compiled our tech as well as

@@ -19,7 +19,7 @@ code {
 
 .togglebutton {
   position: fixed;
-  top: 3%;
+  top: 2%;
   left: 50%;
   z-index: 1;
 }
