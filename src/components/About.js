@@ -24,27 +24,31 @@ const About = () => {
       <div className="bioSections">
         {/* <h6>Emalee Soto,<br></br> Candace Garvin, <br></br>and Lawrence Chan</h6> */}
         <div className="card">
-          <h4>Emalee Soto</h4>
-          <img src={Emalee} alt="Emalee Soto" />
-          <br />
-          <a
-            className="git"
-            href="https://github.com/EmaleeSoto"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Emalee's GitHub
-          </a>
-          <p className="bioText">
-            Hi! I'm a junior Web Developer. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
+          <div className="column-1">
+            <h4>Emalee Soto</h4>
+            <img src={Emalee} alt="Emalee Soto" />
+            <br />
+            <a
+              className="git"
+              href="https://github.com/EmaleeSoto"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Emalee's GitHub
+            </a>
+          </div>
+          <div className="column-2">
+            <p className="bioText">
+              Hi! I'm a junior Web Developer. Lorem ipsum dolor sit amet,
+              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+              labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+              nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate
+              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+              occaecat cupidatat non proident, sunt in culpa qui officia
+              deserunt mollit anim id est laborum.
+            </p>
+          </div>
         </div>
         <div className="card">
           <h4>Candace Garvin</h4>

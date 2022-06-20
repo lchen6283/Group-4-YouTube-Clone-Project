@@ -24,8 +24,9 @@ class Home extends React.Component {
       .then((json) => {
         this.setState({ videos: json.items });
       })
-      .catch(() => {
-        <Modal />;
+      .catch((err) => {
+        // <Modal err={err} />;
+        this.props.navigate("./404");
       });
   };
 
