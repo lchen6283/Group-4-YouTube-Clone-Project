@@ -25,7 +25,7 @@ const VideoList = ({ videos, passedFrom }) => {
           <div key={etag}>
             <Link to={`./videos/${id.videoId}`}>
               <VideoThumbnail video={video} />
-              <p className="title">{title}</p>
+              <p2>{title}</p2>
             </Link>
           </div>
         );
