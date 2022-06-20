@@ -24,8 +24,8 @@ class Home extends React.Component {
       .then((json) => {
         this.setState({ videos: json.items });
       })
-      .catch((err) => {
-        console.log("error fetching image");
+      .catch(() => {
+        <Modal />;
       });
   };
 

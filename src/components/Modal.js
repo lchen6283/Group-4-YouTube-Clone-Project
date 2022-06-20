@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import "./Modal.css";
 
-const Modal = () => {
+const Modal = ({ err }) => {
   const [display, setDisplay] = React.useState(true);
 
   const close = () => {
@@ -15,7 +15,8 @@ const Modal = () => {
         <div className="modal-box">
           <h1>400 error</h1>
           <p>Sent bad request</p>
-          <button onClick={close}></button>
+          <p>{err}</p>
+          <button onClick={close}>Close</button>
         </div>
       </div>
     );

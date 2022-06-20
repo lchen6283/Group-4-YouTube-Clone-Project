@@ -32,15 +32,20 @@ class SearchBar extends React.Component {
     });
   };
 
-  showModal = (event) => {
+  showModal = () => {
     this.setState({
       showModal: !this.state.show,
     });
     console.log("Open Modal");
+    if (this.state.showModal) {
+      return <Modal />;
+    } else {
+      return null;
+    }
   };
 
   render() {
-    const { videos } = this.props;
+    const { videos, passedFrom } = this.props;
     return (
       <div>
         <form onSubmit={this.handleFormSubmit}>
@@ -57,7 +62,7 @@ class SearchBar extends React.Component {
             Search
           </button>
         </form>
-        <VideoList videos={videos} />
+        <VideoList videos={videos} passedFrom={passedFrom} />
       </div>
     );
   }
