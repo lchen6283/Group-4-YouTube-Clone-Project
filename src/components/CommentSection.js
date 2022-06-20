@@ -21,7 +21,7 @@ render(){
           userName={this.userName}
           userComment={this.userComment}
           />
-          <CommentListSection />
+          <CommentList />
         </section>
       </>
     );

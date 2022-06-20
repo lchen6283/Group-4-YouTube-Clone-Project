@@ -4,6 +4,7 @@ import CommentSection from "./CommentSection";
 import Emalee from "../DevPics/Emalee.png";
 import Candace from "../DevPics/Candace.png";
 import Lawrence from "../DevPics/Lawrence.png";
+import CommentForm from "./CommentForm";
 /**
  * About section component, includes our Dev team info
  * @returns <div> containing dev info, images, and project summary
@@ -59,7 +60,9 @@ const About = () => {
         title or content and be met with thousands of video that meet their
         search. We hope we have done it justice. Thanks for stopping by.{" "}
       </p>
+      <CommentSection/>
     </div>
+  
   );
 };
 export default About;

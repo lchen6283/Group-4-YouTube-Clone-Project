@@ -45,9 +45,9 @@ render(){
        
         <ul>
         {this.state.commentList.length > 0
-                ? this.state.commentList.map((comment, i) => {
+                ? this.state.commentList.map((i) => {
                     return (  <li key={i} className="comment">
-                    {comment}
+                    `{this.state.userName} says {this.state.comment}`
                   </li>    );
                   })
                 : ""}

@@ -12,12 +12,23 @@ class CommentForm extends React.Component {
       userName: "",
       comment: ""
     }
-     
   }
+ handleChange = (event) => {
+ 
+    let commenter = event.target.userName.value;
+    let commen = event.target.comment.value;   
+    if (!!commenter && !!commen) {
+      this.setState({
+        commentList: this.state.commentList.concat(
+          `${commenter} says, "${commen}"`
+        )
+      })}}
+    
 
   render() {
  
     return (
+      <>
       <div id="comment-form">
         <label>
           Name
@@ -26,7 +37,7 @@ class CommentForm extends React.Component {
             id="input-box"
             type="text"
             placeholder="Name..."
-            // value={this.state.userName}
+         
             value={this.userName}
           ></input>
         </label>
@@ -39,7 +50,7 @@ class CommentForm extends React.Component {
             id="input-box"
             type="text"
             placeholder="..."
-            value={this.state.comment}
+            onChange={this.state.handleChange}
           ></input>
         </label>
         <button onClick={this.handleFormSubmit}
@@ -49,6 +60,18 @@ class CommentForm extends React.Component {
         {/* <input id="submit-comment-button"type="submit" value="Post">
           </input> */}
       </div>
+      <div>
+      <ul>
+        {this.state.commentList.length > 0
+                ? this.state.commentList.map((i) => {
+                    return (  <li key={i} className="comment">
+                    `{this.state.userName} says {this.state.comment}`
+                  </li>    );
+                  })
+                : ""}
+        </ul>
+      </div>
+      </>
     );
   }
 }
