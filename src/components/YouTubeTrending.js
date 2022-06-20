@@ -31,7 +31,6 @@ export default class YouTubeTrending extends Component {
   render() {
     return (
       <div className="youtube-trending">
-        {" "}
         <SearchBar
           searchForVideo={this.searchForVideo}
           videos={this.state.videos}

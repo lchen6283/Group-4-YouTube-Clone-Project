@@ -11,7 +11,7 @@ import Lawrence from "../DevPics/Lawrence.png";
 const About = () => {
   return (
     <div className="about">
-      <h3>About Us:</h3>
+      <h3>About Project:</h3>
       <p>
         We are currently Jr. Software Engineers at Pursuit located in Queens,
         NY. The purpose of this app is create our rendition of the world famous
@@ -20,11 +20,11 @@ const About = () => {
         title or content and be met with thousands of video that meet their
         search. We hope we have done it justice. Thanks for stopping by.{" "}
       </p>
-      <h3>Engineered By:</h3>
-      <div className="bioSections">
-        {/* <h6>Emalee Soto,<br></br> Candace Garvin, <br></br>and Lawrence Chan</h6> */}
-        <div className="card">
-          <h4>Emalee Soto</h4>
+      <hr />
+
+      <div className="card">
+        <div className="col-1">
+          <h4>Emalee Soto - 8.3</h4>
           <img src={Emalee} alt="Emalee Soto" />
           <br />
           <a
@@ -35,19 +35,14 @@ const About = () => {
           >
             Emalee's GitHub
           </a>
-          <p className="bioText">
-            Hi! I'm a junior Web Developer. Lorem ipsum dolor sit amet,
-            consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-            exercitation ullamco laboris nisi ut aliquip ex ea commodo
-            consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-            cupidatat non proident, sunt in culpa qui officia deserunt mollit
-            anim id est laborum.
-          </p>
         </div>
-        <div className="card">
-          <h4>Candace Garvin</h4>
+        <div className="col-2">
+          <p>Hi! I'm a junior Web Developer.</p>
+        </div>
+      </div>
+      <div className="card">
+        <div className="col-1">
+          <h4>Candace Garvin - 8.3</h4>
           <img src={Candace} alt="Candace Garvin" />
           <br />
           <a
@@ -58,10 +53,22 @@ const About = () => {
           >
             Candace's GitHub
           </a>
-          <p>Hi! I'm a junior Web Developer.</p>
         </div>
-        <div className="card">
-          <h4> Lawrence Chan</h4>
+        <div className="col-2">
+          <p className="bioText">
+            I am currently a Jr. Full Stack Software Developer. I am pursuing
+            this field of work because I have a profound love for computers and
+            their language. Some of my strengths are leadership and project
+            management and I am an expert at time management. The next step I
+            would like to take in my career is working for a big tech company so
+            I can gain experience as well as work with other developers in the
+            industry.
+          </p>
+        </div>
+      </div>
+      <div className="card">
+        <div className="col-1">
+          <h4> Lawrence Chen - 8.3</h4>
           <img src={Lawrence} alt="Lawrence Chen" />
           <br />
           <a
@@ -72,7 +79,20 @@ const About = () => {
           >
             Lawrence's GitHub
           </a>
-          <p>Hi! I'm a junior Web Developer.</p>
+        </div>
+        <div className="col-2">
+          <p className="bioText">
+            I am an aspiring software engineer and full stack web developer
+            currently attending Pursuit, an intensive 12 - month software
+            engineering fellowship with a 9% acceptance rate. I am pursuing
+            software engineering because I have always had a passion for
+            technology. As a creative, I wish to explore the vast array of
+            opportunities with this field. When I'm not on a computer, you can
+            find me in front of the television as I am a big fan of Marvel, DC,
+            and enjoy watching shows or reading manga. Once I obtain the
+            knowledge and skills necessary to succeed as a developer, I want to
+            build a career at companies that are shifting the world.
+          </p>
         </div>
       </div>
     </div>
