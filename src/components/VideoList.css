@@ -14,8 +14,14 @@ img.videos:hover {
   transform: scale(1.1);
 }
 
-a {
+p2 {
+  font-size: larger;
+  background-color: white;
+  /* border-style: solid; */
+  width: 50%;
+  text-align: center;
   color: black;
+  padding: 0px 10px;
 }
 
 @media (max-width: 767px) {
