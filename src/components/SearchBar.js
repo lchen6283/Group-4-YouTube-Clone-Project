@@ -1,5 +1,6 @@
 import React from "react";
 import VideoList from "./VideoList";
+import Modal from "./Modal";
 import "./SearchBar.css";
 
 /**
@@ -11,6 +12,7 @@ class SearchBar extends React.Component {
     super();
     this.state = {
       search: "",
+      showModal: false,
     };
   }
 
@@ -30,8 +32,20 @@ class SearchBar extends React.Component {
     });
   };
 
+  showModal = () => {
+    this.setState({
+      showModal: !this.state.show,
+    });
+    console.log("Open Modal");
+    if (this.state.showModal) {
+      return <Modal />;
+    } else {
+      return null;
+    }
+  };
+
   render() {
-    const { videos } = this.props;
+    const { videos, passedFrom } = this.props;
     return (
       <div>
         <form onSubmit={this.handleFormSubmit}>
@@ -48,7 +62,7 @@ class SearchBar extends React.Component {
             Search
           </button>
         </form>
-        <VideoList videos={videos} />
+        <VideoList videos={videos} passedFrom={passedFrom} />
       </div>
     );
   }

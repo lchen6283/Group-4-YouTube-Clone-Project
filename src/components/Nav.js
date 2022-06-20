@@ -7,8 +7,8 @@ import "./Nav.css";
  */
 const Nav = () => {
   return (
-    <header>
-      <Link to="/">
+    <header className="header">
+      <Link to="/youtube">
         <h1>YouTube</h1>
       </Link>
 

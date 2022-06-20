@@ -1,4 +1,3 @@
-import About from "./About.css";
 import "./About.css";
 import CommentSection from "./CommentSection";
 import Emalee from "../DevPics/Emalee.png";
@@ -11,44 +10,56 @@ import Lawrence from "../DevPics/Lawrence.png";
 
 const About = () => {
   return (
-    <div>
+    <div className="about">
       <h3>Engineered By:</h3>
       {/* <h6>Emalee Soto,<br></br> Candace Garvin, <br></br>and Lawrence Chan</h6> */}
+      <h4>Emalee Soto</h4>
       <div className="card">
-        <h4>Emalee Soto</h4>
-        <img src={Emalee} alt="Emalee Soto" />
-        <a
-          href="https://github.com/EmaleeSoto"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Emalee's GitHub
-        </a>
-        <p>Hi! I'm a junior Web Developer.</p>
+        <div>
+          <img src={Emalee} alt="Emalee Soto" />
+        </div>
+        <div>
+          <a
+            href="https://github.com/EmaleeSoto"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Emalee's GitHub
+          </a>
+          <p>Hi! I'm a junior Web Developer.</p>
+        </div>
       </div>
+      <h4>Candace Garvin</h4>
       <div className="card">
-        <h4>Candace Garvin</h4>
-        <img src={Candace} alt="Candace Garvin" />
-        <a
-          href="https://github.com/CandaceNia"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Candace's GitHub
-        </a>
-        <p>Hi! I'm a junior Web Developer.</p>
+        <div>
+          <img src={Candace} alt="Candace Garvin" />
+        </div>
+        <div>
+          <a
+            href="https://github.com/CandaceNia"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Candace's GitHub
+          </a>
+          <p>Hi! I'm a junior Web Developer.</p>
+        </div>
       </div>
+      <h4> Lawrence Chan</h4>
       <div className="card">
-        <h4> Lawrence Chan</h4>
-        <img src={Lawrence} alt="Lawrence Chen" />
-        <a
-          href="https://github.com/lchen6283"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Lawrence's GitHub
-        </a>
-        <p>Hi! I'm a junior Web Developer.</p>
+        <div>
+          <img src={Lawrence} alt="Lawrence Chen" />
+        </div>
+        <div>
+          <a
+            href="https://github.com/lchen6283"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Lawrence's GitHub
+          </a>
+          <p>Hi! I'm a junior Web Developer.</p>
+        </div>
       </div>
       <h3>About Us:</h3>
       <p>
