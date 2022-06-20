@@ -1,9 +1,11 @@
 import React, { Component } from "react";
-import Modal from "./Modal";
-import SearchBar from "./SearchBar";
 import VideoList from "./VideoList";
 import "./YouTubeTrending.css";
 
+/**
+ * Class component Trending page, manages videos and API call to trending videos
+ * @returns <VideoList>
+ */
 export default class YouTubeTrending extends Component {
   constructor() {
     super();
@@ -32,11 +34,8 @@ export default class YouTubeTrending extends Component {
   render() {
     return (
       <div className="youtube-trending">
-        <SearchBar
-          searchForVideo={this.searchForVideo}
-          videos={this.state.videos}
-          passedFrom="trending"
-        />
+        <h1>Trending Page</h1>
+        <VideoList videos={this.state.videos} passedFrom="trending" />
       </div>
     );
   }

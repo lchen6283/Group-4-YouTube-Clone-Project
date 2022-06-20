@@ -5,8 +5,10 @@ import CommentListSection from "./CommentList";
 import CommentList from "./CommentList";
 import "./CommentSection.css";
 
-//Question: Does not need to be a Class since it does not handle State
-//Maybe it should handle state, and handle the comment list state and addcommentstolist method
+/**
+ * Class component Comment section, manages a list of user made comments
+ * @returns Comment form and Comment list
+ */
 class CommentSection extends React.Component {
   constructor() {
     super();
@@ -26,9 +28,9 @@ class CommentSection extends React.Component {
           <h2>Leave A Comment</h2>
           <CommentForm addCommentToList={this.addCommentToList} />
           {this.state.commentList.length ? (
-            <ul>
+            <div>
               <CommentList arrayOfComments={this.state.commentList} />
-            </ul>
+            </div>
           ) : null}
         </section>
       </>
