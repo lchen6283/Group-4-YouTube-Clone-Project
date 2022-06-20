@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import SearchBar from "./SearchBar";
+import VideoList from "./VideoList";
 import "./YouTubeTrending.css";
 
 export default class YouTubeTrending extends Component {
@@ -20,7 +21,7 @@ export default class YouTubeTrending extends Component {
         this.setState({ videos: json.items });
       })
       .catch((err) => {
-        return <Modal err={err} />;
+        this.props.navigate("./404");
       });
   };
 

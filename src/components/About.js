@@ -21,7 +21,6 @@ const About = () => {
         search. We hope we have done it justice. Thanks for stopping by.{" "}
       </p>
       <hr />
-
       <div className="card">
         <div className="col-1">
           <h4>Emalee Soto - 8.3</h4>
