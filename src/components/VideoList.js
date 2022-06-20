@@ -17,7 +17,7 @@ const VideoList = ({ videos, passedFrom }) => {
           return (
             <Link to={`./videos/${id}`}>
               <VideoThumbnail video={video} />
-              <p2 className="title">{title}</p2>
+              <p className="title">{title}</p>
             </Link>
           );
         }
