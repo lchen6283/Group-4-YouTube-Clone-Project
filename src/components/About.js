@@ -11,7 +11,7 @@ import Lawrence from "../DevPics/Lawrence.png";
 const About = () => {
   return (
     <div className="about">
-      <h3>About Us:</h3>
+      <h3>About Project:</h3>
       <p>
         We are currently Jr. Software Engineers at Pursuit located in Queens,
         NY. The purpose of this app is create our rendition of the world famous
