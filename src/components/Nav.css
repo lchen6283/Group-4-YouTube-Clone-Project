@@ -14,8 +14,6 @@ header {
 
 h1:hover {
   background-color: lightcoral;
-  padding: 10px 0px;
-  transition: all 0.5s ease;
 }
 
 a {
