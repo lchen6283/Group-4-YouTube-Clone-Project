@@ -1,0 +1,28 @@
+#comment-section{
+    border: 3px inset rgb(177, 177, 177);
+    width: 700px;
+ margin: auto;
+}
+#submit-comment-button{
+    display: block;
+    width: fit-content;
+   cursor: wait;
+   height: 30px;
+}
+#like-button, #dislike-button{
+    /* background-color: transparent; */
+    border: none;
+    width: fit-content;
+}
+#comment-form{
+    border: 3px outset rgb(177, 177, 177);
+    width: 500px;
+  padding: 20px;
+  margin: auto;
+}
+#input-box{
+    height: 30px;
+}
+/* .like-button,.dislike-button{
+
+} */
