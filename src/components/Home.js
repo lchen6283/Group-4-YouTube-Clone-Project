@@ -1,6 +1,7 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import "./Home.css";
+import Modal from "./Modal";
 
 /**
  * Class component Home page, manages videos and API call
@@ -23,8 +24,8 @@ class Home extends React.Component {
       .then((json) => {
         this.setState({ videos: json.items });
       })
-      .catch((err) => {
-        console.log("error fetching image");
+      .catch(() => {
+        <Modal />;
       });
   };
 

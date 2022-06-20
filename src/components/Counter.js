@@ -1,37 +1,37 @@
 import React from "react";
 
-class Counter extends React.Component{
-  constructor(){
+//Changed methods to setState
+class Counter extends React.Component {
+  constructor() {
     super();
-    this.state ={
-      likeCount : 0,
- dislikeCount : 0,
-    }
+    this.state = {
+      likeCount: 0,
+      dislikeCount: 0,
+    };
   }
- 
- likeIncrement = () => {
-   
-    this.likeCount ++
- 
-  }
+
+  likeIncrement = () => {
+    this.setState({ likeCount: this.state.likeCount + 1 });
+  };
 
   dislikeIncrement = () => {
-   
-        this.dislikeCount ++
-  }
+    this.setState({ dislikeCount: this.state.dislikeCount + 1 });
+  };
 
-render(){
-      return (
-   <>
-     <p></p>
-        <button id="like-button" type="submit" onClick={this.state.likeIncrement}>👍{this.state.likeCount} </button>
-       
-      
-      <button id="dislike-button" onClick={this.state.dislikeIncrement}>👎{this.state.dislikeCount}</button> 
-      <p></p>
+  render() {
+    return (
+      <>
+        <p></p>
+        <button id="like-button" type="submit" onClick={this.likeIncrement}>
+          👍{this.state.likeCount}{" "}
+        </button>
+
+        <button id="dislike-button" onClick={this.dislikeIncrement}>
+          👎{this.state.dislikeCount}
+        </button>
+        <p></p>
       </>
-      )
-      }  
-    }
-  export default Counter;
-  
+    );
+  }
+}
+export default Counter;
