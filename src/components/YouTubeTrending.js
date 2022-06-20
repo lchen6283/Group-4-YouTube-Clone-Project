@@ -32,8 +32,11 @@ export default class YouTubeTrending extends Component {
   render() {
     return (
       <div className="youtube-trending">
-        <h1>Trending Page</h1>
-        <VideoList videos={this.state.videos} passedFrom="trending" />
+        <SearchBar
+          searchForVideo={this.searchForVideo}
+          videos={this.state.videos}
+          passedFrom="trending"
+        />
       </div>
     );
   }

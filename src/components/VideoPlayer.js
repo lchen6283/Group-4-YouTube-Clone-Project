@@ -7,6 +7,9 @@ import CommentSection from "./CommentSection";
  * @param {Object} video
  * @returns <div> containing a Youtube player
  */
+
+const retrieveVideoInfo = () => {};
+
 const VideoPlayer = ({ video }) => {
   const { id } = useParams();
 
