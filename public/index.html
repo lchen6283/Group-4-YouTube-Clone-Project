@@ -27,6 +27,15 @@
     <title>Group 4 YouTube Clone</title>
   </head>
   <body>
+    <div class="togglebutton">
+      <button class="toggle" onclick="darkMode()">Toggle dark mode</button>
+      <script>
+        function darkMode() {
+          const element = document.body;
+          element.classList.toggle("dark-mode");
+        }
+      </script>
+    </div>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
     <!--
