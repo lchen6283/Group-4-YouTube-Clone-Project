@@ -3,7 +3,7 @@ import "./Nav.css";
 
 /**
  * Nav bar
- * @returns <header> with links to home and about pages
+ * @returns Header with links to home and about pages
  */
 const Nav = () => {
   return (
