@@ -1,11 +1,12 @@
 import React, { forwardRef } from "react";
 import "./Modal.css";
 
-const Modal = ({ err }) => {
+const Modal = ({ navigate }) => {
   const [display, setDisplay] = React.useState(true);
 
   const close = () => {
     setDisplay(false);
+    navigate("./");
   };
 
   if (display) {
@@ -15,7 +16,7 @@ const Modal = ({ err }) => {
         <div className="modal-box">
           <h1>400 error</h1>
           <p>Sent bad request</p>
-          <p>{err}</p>
+          <p></p>
           <button onClick={close}>Close</button>
         </div>
       </div>

@@ -8,8 +8,6 @@ class CommentForm extends React.Component {
   constructor() {
     super();
     this.state = {
-      commentValue: "",
-      commentList: [],
       userName: "",
       comment: "",
     };
@@ -26,39 +24,62 @@ class CommentForm extends React.Component {
       })}}
     
 
+  updateUserName = (event) => {
+    const { value } = event.target;
+    this.setState({
+      userName: value,
+    });
+  };
+
+  updateComment = (event) => {
+    const { value } = event.target;
+    this.setState({
+      comment: value,
+    });
+  };
+
+  handleFormSubmit = (event) => {
+    event.preventDefault();
+    this.props.addCommentToList(
+      `${this.state.userName} says: ${this.state.comment}`
+    );
+  };
   //Changed value to this.state.userName
   render() {
     return (
       <>
       <div id="comment-form">
-        <label for="input-box">
-          Name
+        <form onSubmit={this.handleFormSubmit}>
+          <label for="input-box">
+            Name
+            <br></br>
+            <input
+              className="input-box"
+              id="name"
+              type="text"
+              placeholder="Name..."
+              onChange={this.updateUserName}
+              // value={this.state.userName}
+            ></input>
+          </label>
           <br></br>
-          <input
-            className="input-box"
-            id="name"
-            type="text"
-            placeholder="Name..."
-            // value={this.state.userName}
-            value={this.state.userName}
-          ></input>
-        </label>
-        <br></br>
-        <br></br>
-        <label>
-          Comment
           <br></br>
-          <input
-            className="input-box"
-            id="comment"
-            type="text"
-            placeholder="..."
-            onChange={this.state.handleChange}
-          ></input>
-        </label>
-        <button onClick={this.handleFormSubmit}>Post</button>
-        {/* <input id="submit-comment-button"type="submit" value="Post">
+          <label>
+            Comment
+            <br></br>
+            <input
+              className="input-box"
+              id="comment"
+              type="text"
+              placeholder="..."
+              onChange={this.updateComment}
+              // value={this.state.comment}
+            ></input>
+          </label>
+          <button type="submit">Post</button>
+          {/* <input id="submit-comment-button"type="submit" value="Post">
           </input> */}
+        </form>
       </div>
       <div>
       <ul>

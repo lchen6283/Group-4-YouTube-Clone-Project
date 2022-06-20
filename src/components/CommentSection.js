@@ -10,21 +10,26 @@ import "./CommentSection.css";
 class CommentSection extends React.Component {
   constructor() {
     super();
+    this.state = {
+      commentList: [],
+    };
   }
+
+  addCommentToList = (userComment) => {
+    this.setState({ commentList: [...this.state.commentList, userComment] });
+  };
+
   render() {
     return (
       <>
-        ...
         <section id="comment-section">
           <h2>Leave A Comment</h2>
-          <CommentForm
-            CommentList={CommentList}
-            commentValue={this.commentValue}
-            handleCommentValue={this.handleCommentValue}
-            userName={this.userName}
-            userComment={this.userComment}
-          />
-          <CommentList />
+          <CommentForm addCommentToList={this.addCommentToList} />
+          {this.state.commentList.length ? (
+            <ul>
+              <CommentList arrayOfComments={this.state.commentList} />
+            </ul>
+          ) : null}
         </section>
       </>
     );
