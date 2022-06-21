@@ -21,7 +21,14 @@ const Modal = ({ navigate }) => {
         <div className="modal-box">
           <h1>400 error</h1>
           <p>Sent bad request</p>
-          <button onClick={close}>Close</button>
+          <button id="modal-button" onClick={close}>
+            Close
+          </button>
+          <img
+            id="modal-image"
+            src="https://c.tenor.com/eDchk3srtycAAAAj/piffle-error.gif"
+            alt="Error!"
+          />
         </div>
       </div>
     );
