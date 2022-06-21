@@ -24,7 +24,6 @@ class Counter extends React.Component {
   render() {
     return (
       <>
-        <p></p>
         <button id="like-button" type="submit" onClick={this.likeIncrement}>
           👍{this.state.likeCount}{" "}
         </button>
@@ -32,7 +31,6 @@ class Counter extends React.Component {
         <button id="dislike-button" onClick={this.dislikeIncrement}>
           👎{this.state.dislikeCount}
         </button>
-        <p></p>
       </>
     );
   }

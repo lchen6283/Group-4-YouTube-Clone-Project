@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import VideoList from "./VideoList";
+import SideBar from "./SideBar";
 import "./YouTubeTrending.css";
 
 /**
@@ -16,13 +17,13 @@ export default class YouTubeTrending extends Component {
 
   searchForVideo = () => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=8&regionCode=US&key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=24&regionCode=US&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then((json) => {
         this.setState({ videos: json.items });
       })
-      .catch((err) => {
+      .catch(() => {
         this.props.navigate("./404");
       });
   };
@@ -32,10 +33,16 @@ export default class YouTubeTrending extends Component {
   }
 
   render() {
+    const { buttons, navigate } = this.props;
     return (
       <div className="youtube-trending">
-        <h1>Trending Page</h1>
-        <VideoList videos={this.state.videos} passedFrom="trending" />
+        <h1 className="trending">Trending Page</h1>
+        <div className="sidebar-container">
+          <SideBar buttons={buttons} navigate={navigate} className="topics" />
+        </div>
+        <div className="video-list-trending">
+          <VideoList videos={this.state.videos} passedFrom="trending" />
+        </div>
       </div>
     );
   }

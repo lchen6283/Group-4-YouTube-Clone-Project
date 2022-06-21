@@ -10,7 +10,6 @@
    height: 30px;
 }
 #like-button, #dislike-button{
-    /* background-color: transparent; */
     border: none;
     width: fit-content;
 }
@@ -23,6 +22,3 @@
 #input-box{
     height: 30px;
 }
-/* .like-button,.dislike-button{
-
-} */

@@ -9,21 +9,21 @@ import "./VideoList.css";
  */
 const VideoList = ({ videos, passedFrom }) => {
   return (
-    <div className="container">
+    <div className="video-container">
       {videos.map((video) => {
         const { id, snippet, etag } = video;
         const { title } = snippet;
         if (passedFrom === "trending") {
           return (
-            <Link to={`./videos/${id}`}>
+            <Link className="links" key={etag} to={`./videos/${id}`}>
               <VideoThumbnail video={video} />
-              <p2 className="title">{title}</p2>
+              <p className="title">{title}</p>
             </Link>
           );
         }
         return (
           <div key={etag}>
-            <Link to={`./videos/${id.videoId}`}>
+            <Link className="links" key={etag} to={`./videos/${id.videoId}`}>
               <VideoThumbnail video={video} />
               <p className="title">{title}</p>
             </Link>
