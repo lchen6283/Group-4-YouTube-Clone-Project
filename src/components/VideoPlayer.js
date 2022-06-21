@@ -2,34 +2,26 @@ import YouTube from "react-youtube";
 import React from "react";
 import { useParams } from "react-router-dom";
 import CommentSection from "./CommentSection";
+import SideBar from "./SideBar";
 import "./VideoPlayer.css";
 
 /**
  * Displays Youtube player for a given video
  * @param {Object} video
- * @returns <div> containing a Youtube player
+ * @returns Sidebar and youtube player with a comment section
  */
-
-const retrieveVideoInfo = (id, navigate) => {
-  fetch(
-    `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${process.env.REACT_APP_API_KEY}`
-  )
-    .then((response) => response.json())
-    .then((json) => {
-      return json.items;
-    })
-    .catch((err) => {
-      navigate("./404");
-    });
-};
-
-const VideoPlayer = ({ navigate }) => {
+const VideoPlayer = ({ navigate, buttons }) => {
   const { id } = useParams();
 
   return (
-    <div className="videoCommentPage">
-      <YouTube className="video" videoId={id} />
-      <CommentSection />
+    <div>
+      <div className="sidebar-container">
+        <SideBar className="topics" buttons={buttons} navigate={navigate} />
+      </div>
+      <div className="videoCommentPage">
+        <YouTube className="video" videoId={id} />
+        <CommentSection />
+      </div>
     </div>
   );
 };

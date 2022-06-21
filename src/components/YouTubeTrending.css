@@ -4,6 +4,7 @@
 
 .video-list-trending {
   margin-left: 15%;
+  margin-right: 5%;
 }
 
 .sidebar-container {
@@ -37,5 +38,6 @@
   }
   .video-list-trending {
     margin-left: 0;
+    margin-right: 0;
   }
 }

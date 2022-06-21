@@ -5,13 +5,13 @@ import Counter from "./Counter";
  * @params array[] - Array of strings
  * @returns List element with a Counter component
  */
-const createList = (array) => {
-  return array.map((a) => {
+const createList = (arrayOfComments) => {
+  return arrayOfComments.map((comment) => {
     return (
-      <li>
-        <p>{a}</p>
+      <p>
+        <p>{comment}</p>
         <Counter />
-      </li>
+      </p>
     );
   });
 };
@@ -22,7 +22,7 @@ const createList = (array) => {
  * @returns Unordered list containing comments
  */
 const CommentList = ({ arrayOfComments }) => {
-  return <ul>{createList(arrayOfComments)}</ul>;
+  return <div>{createList(arrayOfComments)}</div>;
 };
 
 export default CommentList;

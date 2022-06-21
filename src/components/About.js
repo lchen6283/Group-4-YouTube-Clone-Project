@@ -21,7 +21,7 @@ const About = () => {
       <hr />
       <div className="card">
         <div className="col-1">
-          <h4>Emalee Soto - 8.3</h4>
+          <h4>Emalee Soto - Team Lead</h4>
           <img src={Emalee} alt="Emalee Soto" />
           <br />
           <a
@@ -48,7 +48,7 @@ const About = () => {
       </div>
       <div className="card">
         <div className="col-1">
-          <h4>Candace Garvin - 8.3</h4>
+          <h4>Candace Garvin - Backend Dev</h4>
           <img src={Candace} alt="Candace Garvin" />
           <br />
           <a
@@ -74,7 +74,7 @@ const About = () => {
       </div>
       <div className="card">
         <div className="col-1">
-          <h4> Lawrence Chen - 8.3</h4>
+          <h4> Lawrence Chen - Frontend Dev</h4>
           <img src={Lawrence} alt="Lawrence Chen" />
           <br />
           <a
@@ -102,7 +102,6 @@ const About = () => {
         </div>
       </div>
     </div>
-  
   );
 };
 export default About;

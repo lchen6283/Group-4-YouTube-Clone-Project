@@ -16,6 +16,15 @@ code {
   color: black;
 }
 
+.git {
+  color: blue;
+  
+}
+
+.git:hover {
+  background-color: lightblue;
+}
+
 .dark-mode {
   background-color: #181818;
   color: white;
@@ -23,6 +32,14 @@ code {
 
 .dark-mode .title {
   color: white
+}
+
+.dark-mode .git {
+  color: red;
+}
+
+.dark-mode .git:hover {
+  background-color: lightcoral;
 }
 
 .togglebutton {

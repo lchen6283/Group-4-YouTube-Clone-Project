@@ -15,6 +15,10 @@ class CommentSection extends React.Component {
     };
   }
 
+  /**
+   * Sets state of commentList to the current state, and adds a user comment to the list
+   * @param {string} - userComment
+   */
   addCommentToList = (userComment) => {
     this.setState({ commentList: [...this.state.commentList, userComment] });
   };

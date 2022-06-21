@@ -5,6 +5,12 @@ const handleClick = (event) => {
   alert(`Feature Coming Soon!`);
 };
 
+/**
+ * Class component Search Bar
+ * @params {string} - buttonName
+ * @params {func} - navigate
+ * @returns div containing clickable paragraph tags that navigate to respective paths
+ */
 const SideButton = ({ buttonName, navigate }) => {
   const navigateToTrending = () => {
     navigate("./youtube");

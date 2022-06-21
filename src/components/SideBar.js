@@ -1,5 +1,11 @@
 import SideButton from "./SideButton";
 
+/**
+ * Creates a side bar that generates a button for an array of topics
+ * @params {array} - buttons
+ * @params {func} - navigate
+ * @returns Sidebar
+ */
 const SideBar = ({ buttons, navigate }) => {
   return (
     <div className="sidebar">
