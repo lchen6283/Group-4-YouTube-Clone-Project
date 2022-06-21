@@ -6,7 +6,7 @@ import Counter from "./Counter";
  * @returns List element with a Counter component
  */
 const createList = (array) => {
-  const list = array.map((a) => {
+  return array.map((a) => {
     return (
       <li>
         <p>{a}</p>
@@ -14,7 +14,6 @@ const createList = (array) => {
       </li>
     );
   });
-  return list;
 };
 
 /**

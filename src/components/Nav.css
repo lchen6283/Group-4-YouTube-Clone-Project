@@ -5,6 +5,7 @@ header {
   position: sticky;
   top: 0px;
   text-align: center;
+  z-index: 1;
 }
 
 .header h1 {
@@ -12,7 +13,7 @@ header {
   margin-left: 10px;
 }
 
-h1:hover {
+.header h1:hover {
   background-color: lightcoral;
 }
 

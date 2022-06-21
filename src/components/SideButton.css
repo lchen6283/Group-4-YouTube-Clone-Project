@@ -1,0 +1,7 @@
+.side-button {
+    margin-top: 20%;
+}
+.side-button:hover {
+    background-color: lightgray;
+    cursor: pointer;
+}

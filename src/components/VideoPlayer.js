@@ -9,7 +9,7 @@ import CommentSection from "./CommentSection";
  * @returns <div> containing a Youtube player
  */
 
-const retrieveVideoInfo = (id) => {
+const retrieveVideoInfo = (id, navigate) => {
   fetch(
     `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&id=${id}&key=${process.env.REACT_APP_API_KEY}`
   )
@@ -18,11 +18,11 @@ const retrieveVideoInfo = (id) => {
       return json.items;
     })
     .catch((err) => {
-      this.props.navigate("./404");
+      navigate("./404");
     });
 };
 
-const VideoPlayer = ({ video }) => {
+const VideoPlayer = ({ navigate }) => {
   const { id } = useParams();
 
   return (

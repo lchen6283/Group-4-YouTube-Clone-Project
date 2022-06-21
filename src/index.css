@@ -12,16 +12,25 @@ code {
     monospace;
 }
 
+.title {
+  color: black;
+}
+
 .dark-mode {
   background-color: #181818;
   color: white;
 }
 
+.dark-mode .title {
+  color: white
+}
+
 .togglebutton {
   position: fixed;
-  top: 2%;
-  left: 50%;
-  z-index: 1;
+  position: fixed;
+  top: 3%;
+  left: 90%;
+  z-index: 2;
 }
 
 .toggle:hover {

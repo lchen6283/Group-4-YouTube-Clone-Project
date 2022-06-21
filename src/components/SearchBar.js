@@ -1,6 +1,6 @@
 import React from "react";
 import VideoList from "./VideoList";
-import Modal from "./Modal";
+import SideBar from "./SideBar";
 import "./SearchBar.css";
 
 /**
@@ -32,20 +32,8 @@ class SearchBar extends React.Component {
     });
   };
 
-  showModal = () => {
-    this.setState({
-      showModal: !this.state.show,
-    });
-    console.log("Open Modal");
-    if (this.state.showModal) {
-      return <Modal />;
-    } else {
-      return null;
-    }
-  };
-
   render() {
-    const { videos, passedFrom } = this.props;
+    const { videos, passedFrom, buttons, navigate } = this.props;
     return (
       <div>
         <form onSubmit={this.handleFormSubmit}>
@@ -62,7 +50,12 @@ class SearchBar extends React.Component {
             Search
           </button>
         </form>
-        <VideoList videos={videos} passedFrom={passedFrom} />
+        <div className="sidebar-container">
+          <SideBar className="topics" buttons={buttons} navigate={navigate} />
+        </div>
+        <div className="video-list-home">
+          <VideoList videos={videos} passedFrom={passedFrom} />
+        </div>
       </div>
     );
   }

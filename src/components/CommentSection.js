@@ -1,7 +1,5 @@
-import { eventWrapper } from "@testing-library/user-event/dist/utils";
 import React from "react";
 import CommentForm from "./CommentForm";
-import CommentListSection from "./CommentList";
 import CommentList from "./CommentList";
 import "./CommentSection.css";
 
@@ -23,17 +21,15 @@ class CommentSection extends React.Component {
 
   render() {
     return (
-      <>
-        <section id="comment-section">
-          <h2>Leave A Comment</h2>
-          <CommentForm addCommentToList={this.addCommentToList} />
-          {this.state.commentList.length ? (
-            <div>
-              <CommentList arrayOfComments={this.state.commentList} />
-            </div>
-          ) : null}
-        </section>
-      </>
+      <section id="comment-section">
+        <h2>Leave A Comment</h2>
+        <CommentForm addCommentToList={this.addCommentToList} />
+        {this.state.commentList.length ? (
+          <div>
+            <CommentList arrayOfComments={this.state.commentList} />
+          </div>
+        ) : null}
+      </section>
     );
   }
 }
