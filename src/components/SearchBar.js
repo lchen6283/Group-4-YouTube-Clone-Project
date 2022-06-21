@@ -16,6 +16,10 @@ class SearchBar extends React.Component {
     };
   }
 
+  /**
+   * Updates the state of search and sets it to the user inputted search
+   * @param event
+   */
   updateSearchState = (event) => {
     const { value } = event.target;
     this.setState({
@@ -37,7 +41,6 @@ class SearchBar extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleFormSubmit}>
-          {/* <label for="search"></label> */}
           <input
             type="text"
             name="search"

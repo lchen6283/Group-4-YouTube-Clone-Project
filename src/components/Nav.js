@@ -9,7 +9,11 @@ const Nav = () => {
   return (
     <header className="header">
       <Link to="/youtube">
-        <h1>YouTube</h1>
+        <img
+          className="logo"
+          src="https://c.tenor.com/6TwUFuzcjOQAAAAd/youtube.gif"
+          alt="yt-logo"
+        />
       </Link>
 
       <Link to="/">

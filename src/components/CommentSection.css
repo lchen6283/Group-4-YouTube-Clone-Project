@@ -1,24 +1,39 @@
 #comment-section{
-    border: 3px inset rgb(177, 177, 177);
+    border-top: 1px inset rgb(177, 177, 177);
     width: 700px;
- margin: auto;
+    margin: auto;
 }
-#submit-comment-button{
+#comment-button{
     display: block;
-    width: fit-content;
-   cursor: wait;
-   height: 30px;
+    width: 90px;
+    cursor: wait;
+    height: 30px;
+    border-color: silver;
+    border-radius: 10px;
+    background-color: rgb(3, 136, 252);
+
 }
 #like-button, #dislike-button{
     border: none;
     width: fit-content;
 }
 #comment-form{
-    border: 3px outset rgb(177, 177, 177);
     width: 500px;
-  padding: 20px;
-  margin: auto;
+    padding: 20px;
+    margin: auto;
+
 }
-#input-box{
-    height: 30px;
+.input-box{
+    height: 40px;
+    width: 500px;
+    border-color: lightgrey;
+}
+#form{
+    background-color: transparent;
+}
+
+.comment-btn:hover{
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }

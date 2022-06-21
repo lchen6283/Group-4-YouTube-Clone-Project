@@ -3,24 +3,20 @@
 }
 
 .video-list-trending {
-  margin-left: 15%
-}
-
-.trending:hover {
-  padding-bottom: 10px;
-  transition-duration: 0.2s;
+  margin-left: 15%;
+  margin-right: 5%;
 }
 
 .sidebar-container {
-    height: 100%;
-    width: 160px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    color: white;
-    background-color: #111;
-    overflow-x: hidden;
-    padding-top: 5%;
+  height: 100%;
+  width: 160px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  color: white;
+  background-color: #111;
+  overflow-x: hidden;
+  padding-top: 5%;
 }
 
 @media (max-width: 1115px) {
@@ -42,5 +38,6 @@
   }
   .video-list-trending {
     margin-left: 0;
+    margin-right: 0;
   }
 }

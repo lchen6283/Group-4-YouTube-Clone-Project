@@ -17,6 +17,12 @@ header {
   background-color: lightcoral;
 }
 
+img.logo {
+  width: 130px;
+  position: relative;
+  right: 20px;
+}
+
 a {
   text-decoration: none;
 }
@@ -30,5 +36,8 @@ a {
   h1 {
     font-size: 20px;
     margin: 5px;
+  }
+  img.logo {
+    right: 0px;
   }
 }

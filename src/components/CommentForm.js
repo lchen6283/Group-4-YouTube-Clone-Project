@@ -14,6 +14,10 @@ class CommentForm extends React.Component {
     };
   }
 
+  /**
+   * Sets state of userName to user inputted value
+   * @param event
+   */
   updateUserName = (event) => {
     const { value } = event.target;
     this.setState({
@@ -21,6 +25,10 @@ class CommentForm extends React.Component {
     });
   };
 
+  /**
+   * Sets state of comment to user inputted value
+   * @param event
+   */
   updateComment = (event) => {
     const { value } = event.target;
     this.setState({
@@ -42,8 +50,8 @@ class CommentForm extends React.Component {
   render() {
     return (
       <div id="comment-form">
-        <form onSubmit={this.handleFormSubmit}>
-          <label for="input-box">
+        <form onSubmit={this.handleFormSubmit} id="form">
+          <label>
             Name
             <br></br>
             <input
@@ -53,6 +61,7 @@ class CommentForm extends React.Component {
               placeholder="Name..."
               onChange={this.updateUserName}
               autoComplete="off"
+              required
             ></input>
           </label>
           <br></br>
@@ -67,9 +76,14 @@ class CommentForm extends React.Component {
               placeholder="..."
               onChange={this.updateComment}
               autoComplete="off"
+              required
             ></input>
           </label>
-          <button type="submit">Post</button>
+          <br></br>
+          <br></br>
+          <button type="submit" id="comment-button" className="comment-btn">
+            Sumbit
+          </button>
         </form>
       </div>
     );
