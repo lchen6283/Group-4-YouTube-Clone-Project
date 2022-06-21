@@ -42,7 +42,7 @@ class CommentForm extends React.Component {
   render() {
     return (
       <div id="comment-form">
-        <form onSubmit={this.handleFormSubmit}>
+        <form onSubmit={this.handleFormSubmit} id="form">
           <label for="input-box">
             Name
             <br></br>
@@ -69,7 +69,9 @@ class CommentForm extends React.Component {
               autoComplete="off"
             ></input>
           </label>
-          <button type="submit">Post</button>
+          <br></br>
+          <br></br>
+          <button type="submit" id="comment-button" className="comment-btn">Sumbit</button>
         </form>
       </div>
     );

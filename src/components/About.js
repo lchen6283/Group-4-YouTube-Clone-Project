@@ -2,7 +2,6 @@ import "./About.css";
 import Emalee from "../DevPics/Emalee.png";
 import Candace from "../DevPics/Candace.png";
 import Lawrence from "../DevPics/Lawrence.png";
-
 /**
  * About section component, includes our Dev team info
  * @returns <div> containing dev info, images, and project summary
@@ -103,6 +102,7 @@ const About = () => {
         </div>
       </div>
     </div>
+  
   );
 };
 export default About;
