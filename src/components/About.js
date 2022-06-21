@@ -48,7 +48,7 @@ const About = () => {
       </div>
       <div className="card">
         <div className="col-1">
-          <h4>Candace Garvin - Backend Dev</h4>
+          <h4>Candace Garvin - Backend Developer</h4>
           <img src={Candace} alt="Candace Garvin" />
           <br />
           <a
@@ -74,7 +74,7 @@ const About = () => {
       </div>
       <div className="card">
         <div className="col-1">
-          <h4> Lawrence Chen - Frontend Dev</h4>
+          <h4> Lawrence Chen - Frontend Developer</h4>
           <img src={Lawrence} alt="Lawrence Chen" />
           <br />
           <a
