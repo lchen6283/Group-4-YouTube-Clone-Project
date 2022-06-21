@@ -30,13 +30,17 @@ input {
 }
 
 .video-list-home {
-  margin-left: 15%
+  margin-left: 15%;
 }
-
 
 @media (max-width: 900px) {
   .video-list-home {
     margin-left: 0;
+  }
+}
+@media (max-width: 767px) {
+  form {
+    top: 143px;
   }
 }
 
