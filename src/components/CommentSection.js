@@ -22,7 +22,6 @@ class CommentSection extends React.Component {
   render() {
     return (
       <section id="comment-section">
-        <h2>Leave A Comment</h2>
         <CommentForm addCommentToList={this.addCommentToList} />
         {this.state.commentList.length ? (
           <div>
