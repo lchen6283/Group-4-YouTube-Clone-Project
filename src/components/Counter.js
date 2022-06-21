@@ -1,6 +1,9 @@
 import React from "react";
 
-//Changed methods to setState
+/**
+ * Class component Counter, manages likes and dislikes of a comment
+ * @returns Button that adds likes and dislikes to a comment
+ */
 class Counter extends React.Component {
   constructor() {
     super();
@@ -21,7 +24,6 @@ class Counter extends React.Component {
   render() {
     return (
       <>
-        <p></p>
         <button id="like-button" type="submit" onClick={this.likeIncrement}>
           👍{this.state.likeCount}{" "}
         </button>
@@ -29,7 +31,6 @@ class Counter extends React.Component {
         <button id="dislike-button" onClick={this.dislikeIncrement}>
           👎{this.state.dislikeCount}
         </button>
-        <p></p>
       </>
     );
   }

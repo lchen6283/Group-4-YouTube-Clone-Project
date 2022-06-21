@@ -1,7 +1,6 @@
 import React from "react";
 import SearchBar from "./SearchBar";
 import "./Home.css";
-import Modal from "./Modal";
 
 /**
  * Class component Home page, manages videos and API call
@@ -18,28 +17,26 @@ class Home extends React.Component {
 
   searchForVideo = (search) => {
     fetch(
-      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=8&q=${search}&key=${process.env.REACT_APP_API_KEY}`
+      `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${search}&key=${process.env.REACT_APP_API_KEY}`
     )
       .then((response) => response.json())
       .then((json) => {
         this.setState({ videos: json.items });
       })
-      .catch((err) => {
-        // <Modal err={err} />;
+      .catch(() => {
         this.props.navigate("./404");
       });
   };
 
-  // componentDidMount() {
-  //   this.searchForVideo();
-  // }
-
   render() {
+    const { buttons, navigate } = this.props;
     return (
       <div className="thumbnails">
         <SearchBar
           searchForVideo={this.searchForVideo}
           videos={this.state.videos}
+          buttons={buttons}
+          navigate={navigate}
         />
         {!this.state.videos.length && (
           <p>No Search Results Yet! Please submit a search above!</p>

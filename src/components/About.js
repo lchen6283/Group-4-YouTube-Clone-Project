@@ -1,19 +1,16 @@
 import "./About.css";
-import CommentSection from "./CommentSection";
 import Emalee from "../DevPics/Emalee.png";
 import Candace from "../DevPics/Candace.png";
 import Lawrence from "../DevPics/Lawrence.png";
-import CommentForm from "./CommentForm";
 /**
  * About section component, includes our Dev team info
  * @returns <div> containing dev info, images, and project summary
  */
-
 const About = () => {
   return (
     <div className="about">
       <h3>About Project:</h3>
-      <p>
+      <p className="about-prj">
         We are currently Jr. Software Engineers at Pursuit located in Queens,
         NY. The purpose of this app is create our rendition of the world famous
         YouTube application. Together we have compiled our tech as well as
@@ -37,7 +34,16 @@ const About = () => {
           </a>
         </div>
         <div className="col-2">
-          <p>Hi! I'm a junior Web Developer.</p>
+          <p>
+            Hi! I'm a junior Full Stack Web Developer. I found my passion for
+            coding when I attended the Girls Who Code summer program in high
+            school, and I pursued a Bachelor's Degree in Computer Science at
+            Hunter College that I hope to one day complete. I currently attend
+            the Pursuit Fellowship Program as a Fellow in the 8.3 Cohort, where
+            I have learned the fundamentals of JavaScript and front end
+            development. I love to take on new challenges, and I am ever-growing
+            as an engineer. Nice to meet you!
+          </p>
         </div>
       </div>
       <div className="card">

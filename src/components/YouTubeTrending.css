@@ -1,3 +1,46 @@
 .youtube-trending {
   text-align: center;
 }
+
+.video-list-trending {
+  margin-left: 15%
+}
+
+.trending:hover {
+  padding-bottom: 10px;
+  transition-duration: 0.2s;
+}
+
+.sidebar-container {
+    height: 100%;
+    width: 160px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 5%;
+}
+
+@media (max-width: 1115px) {
+  .sidebar-container {
+    width: fit-content;
+    padding-top: 7%;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar-container {
+    padding-top: 9%;
+  }
+}
+
+@media (max-width: 900px) {
+  .sidebar-container {
+    display: none;
+  }
+  .video-list-trending {
+    margin-left: 0;
+  }
+}

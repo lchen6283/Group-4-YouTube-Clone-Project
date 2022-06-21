@@ -1,14 +1,12 @@
-// import React from "react";
-// import CommentForm from "./CommentForm";
-// import Counter from "./Counter";
-// import CommentSection from "./CommentSection";
 import Counter from "./Counter";
 
-// //Does not need to be state
-// //Move handleformsubmit to CommentSection
-
+/**
+ * Creates list items of comments made by users
+ * @params array[] - Array of strings
+ * @returns List element with a Counter component
+ */
 const createList = (array) => {
-  const list = array.map((a) => {
+  return array.map((a) => {
     return (
       <li>
         <p>{a}</p>
@@ -16,12 +14,15 @@ const createList = (array) => {
       </li>
     );
   });
-  return list;
 };
 
+/**
+ * Creates a list of comments based on what has been submitted via the form
+ * @params arrayOfComments[] - Array of comments
+ * @returns Unordered list containing comments
+ */
 const CommentList = ({ arrayOfComments }) => {
-  //const list = createList(arrayOfComments);
-  return <div>{createList(arrayOfComments)}</div>;
+  return <ul>{createList(arrayOfComments)}</ul>;
 };
 
 export default CommentList;
