@@ -10,9 +10,14 @@ p.title {
   padding: 0px 10px;
 }
 
-@media (max-width: 767px) {
-  .container {
-    display: grid;
-    grid-template-columns: 1fr;
+@media (max-width: 1000px) {
+  .video-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 500px) {
+  .video-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }

@@ -17,6 +17,10 @@ header {
   background-color: lightcoral;
 }
 
+img.logo {
+  width: 130px;
+}
+
 a {
   text-decoration: none;
 }

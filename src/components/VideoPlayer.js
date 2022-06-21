@@ -2,6 +2,7 @@ import YouTube from "react-youtube";
 import React from "react";
 import { useParams } from "react-router-dom";
 import CommentSection from "./CommentSection";
+import "./VideoPlayer.css";
 
 /**
  * Displays Youtube player for a given video
@@ -26,7 +27,7 @@ const VideoPlayer = ({ navigate }) => {
   const { id } = useParams();
 
   return (
-    <div>
+    <div className="videoCommentPage">
       <YouTube className="video" videoId={id} />
       <CommentSection />
     </div>
