@@ -2,7 +2,7 @@ import "./SideButton.css";
 
 const handleClick = (event) => {
   event.preventDefault();
-  alert(`Feature Coming Soon!`);
+  alert(`Feature Coming Soon! Check out our Trending Page in the meantime.`);
 };
 
 /**
